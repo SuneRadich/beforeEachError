@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'abetest',
+  displayName: 'beforeEachError',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/libs/abetest',
+  coverageDirectory: '../../coverage/libs/beforeEachError',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

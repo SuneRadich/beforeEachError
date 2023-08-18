@@ -8,4 +8,4 @@ import { RouterModule } from '@angular/router';
   declarations: [UseRouterComponent],
   exports: [UseRouterComponent],
 })
-export class AbetestModule {}
+export class BeforeEachErrorModule {}

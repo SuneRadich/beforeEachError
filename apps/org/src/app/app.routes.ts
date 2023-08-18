@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { UseRouterComponent } from '@org/abetest';
+import { UseRouterComponent } from '@org/beforeEachError';
 
 export const appRoutes: Route[] = [
   {

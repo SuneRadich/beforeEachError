@@ -1,7 +1,7 @@
 {
-  "name": "abetest",
+  "name": "beforeEachError",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/abetest/src",
+  "sourceRoot": "libs/beforeEachError/src",
   "prefix": "org",
   "tags": [],
   "projectType": "library",
@@ -10,7 +10,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/abetest/jest.config.ts",
+        "jestConfig": "libs/beforeEachError/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -24,15 +24,18 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/abetest/**/*.ts", "libs/abetest/**/*.html"]
+        "lintFilePatterns": [
+          "libs/beforeEachError/**/*.ts",
+          "libs/beforeEachError/**/*.html"
+        ]
       }
     },
     "storybook": {
       "executor": "@storybook/angular:start-storybook",
       "options": {
         "port": 4400,
-        "configDir": "libs/abetest/.storybook",
-        "browserTarget": "abetest:build-storybook",
+        "configDir": "libs/beforeEachError/.storybook",
+        "browserTarget": "beforeEachError:build-storybook",
         "compodoc": false,
         "open": false
       },
@@ -47,8 +50,8 @@
       "outputs": ["{options.outputDir}"],
       "options": {
         "outputDir": "dist/storybook/abetest",
-        "configDir": "libs/abetest/.storybook",
-        "browserTarget": "abetest:build-storybook",
+        "configDir": "libs/beforeEachError/.storybook",
+        "browserTarget": "beforeEachError:build-storybook",
         "compodoc": false
       },
       "configurations": {
@@ -60,18 +63,18 @@
     "test-storybook": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "test-storybook -c libs/abetest/.storybook --url=http://localhost:4400"
+        "command": "test-storybook -c libs/beforeEachError/.storybook --url=http://localhost:4400"
       }
     },
     "static-storybook": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "abetest:build-storybook",
+        "buildTarget": "beforeEachError:build-storybook",
         "staticFilePath": "dist/storybook/abetest"
       },
       "configurations": {
         "ci": {
-          "buildTarget": "abetest:build-storybook:ci"
+          "buildTarget": "beforeEachError:build-storybook:ci"
         }
       }
     }

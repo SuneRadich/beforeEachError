@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@org/abetest": ["libs/abetest/src/index.ts"]
+      "@org/beforeEachError": ["libs/beforeEachError/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

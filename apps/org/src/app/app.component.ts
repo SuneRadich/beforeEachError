@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AbetestModule } from '@org/abetest';
+import { BeforeEachErrorModule } from '@org/beforeEachError';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, AbetestModule],
+  imports: [RouterModule, BeforeEachErrorModule],
   selector: 'org-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
